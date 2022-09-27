@@ -2,7 +2,6 @@
 #
 # Configure Nginx so that its HTTP response contains
 # a custom header
-sudo apt-get -y update
 sudo apt-get install -y haproxy=2.0.\*
 frontend_configuration="frontend http\n\tbind *:80\n\tmode http\n\tdefault_backend web-backend\n"
 backend_configuration="backend web-backend\n\tbalance roundrobin\n\tmode http\n\tserver web-01 44.192.84.176:80 check\n\tserver web-02 44.200.144.73:80 check"
