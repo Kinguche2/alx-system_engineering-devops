@@ -26,4 +26,4 @@ sudo apt update
 sudo apt install haproxy
 sudo cp -a /etc/haproxy/haproxy.cfg{,.orig}
 echo "$balancer" >> /etc/haproxy/haproxy.cfg
-sudo service haproxy restart
+service haproxy restart
