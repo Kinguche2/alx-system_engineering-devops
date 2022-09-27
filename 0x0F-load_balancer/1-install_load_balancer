@@ -14,16 +14,16 @@ backend webservers
     server 26071-web-02 44.200.144.73:80 check
 "
 # Update packages
-sudo apt update
-sudo apt upgrade
+apt update
+apt upgrade
 
 # Add HAProxy PPA
-sudo apt install software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-2.5
-sudo apt update
+apt install software-properties-common
+add-apt-repository ppa:vbernat/haproxy-2.5
+apt update
 
 # Install HAProxy
-sudo apt install haproxy
-sudo cp -a /etc/haproxy/haproxy.cfg{,.orig}
+apt install haproxy
+cp -a /etc/haproxy/haproxy.cfg{,.orig}
 echo "$balancer" >> /etc/haproxy/haproxy.cfg
 service haproxy restart
