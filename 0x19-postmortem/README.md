@@ -1,6 +1,6 @@
 ## Postmortem
 
-The `0x19-postmortem` project was released at exactly 6:00 AM(WAT) on 31 October, 2022. The ubuntu 14.04 container running on Apache web server was returning a `500 Internal Server Error` when a GET request was made. The expected output was a HTML file defining a simple Holberton WordPress site.
+The `0x17-web_stack_debugging 3` project was released at exactly 6:00 AM(WAT) on 31 October, 2022. The ubuntu 14.04 container running on Apache web server was returning a `500 Internal Server Error` when a GET request was made. The expected output was a HTML file defining a simple Holberton WordPress site.
 ## Debugging
 
 Junior Software developer on duty as at the time of this error was [Uche](https://github.com/Kinguche2) and he promptly proceeded to solve the problem.
