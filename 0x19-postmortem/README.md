@@ -25,4 +25,4 @@ A typo error was the bug in this case and removing of the trailing `p` allowed t
 
 This error could have been prevented if testing was done on the application before it was deployed. Also, status monitoring could be enabled by setting up an automated uptime-monitoring services like [Datadog](https://www.datadoghq.com/) to instantly alert upon outage of the website
 
-Note that in response to this error, I wrote a Puppet manifest [0-strace_is_your_friend.pp](https://github.com/kinguche2/alx-system_engineering-devops/0x17-web_stack_debugging_3/0-strace_is_your_friend.pp) to automate fixing of any such identitical errors should they occur in the future. The manifest replaces any phpp extensions in the file /var/www/html/wp-settings.php with php.
+Note that in response to this error, I wrote a Puppet manifest [0-strace_is_your_friend.pp](https://github.com/Kinguche2/alx-system_engineering-devops/blob/main/0x17-web_stack_debugging_3/0-strace_is_your_friend.pp) to automate fixing of any such identitical errors should they occur in the future. The manifest replaces any phpp extensions in the file /var/www/html/wp-settings.php with php.
