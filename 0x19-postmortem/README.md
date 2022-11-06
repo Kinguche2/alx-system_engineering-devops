@@ -1,6 +1,6 @@
 ## Postmortem
 
-The `0x19-postmortem` projet was released at exactly 6:00 AM(WAT) on 31 October, 2022. The ubuntu 14.04 container running on Apache web server was returning a `500 Internal Server Error` when a GET request was made. The expected output was a HTML file defining a simple Holberton WordPress site.
+The `0x19-postmortem` project was released at exactly 6:00 AM(WAT) on 31 October, 2022. The ubuntu 14.04 container running on Apache web server was returning a `500 Internal Server Error` when a GET request was made. The expected output was a HTML file defining a simple Holberton WordPress site.
 ## Debugging
 
 Junior Software developer on duty as at the time of this error was [Uche](https://github.com/Kinguche2) and he promptly proceeded to solve the problem.
@@ -11,7 +11,7 @@ Junior Software developer on duty as at the time of this error was [Uche](https:
 
 3. Then he ran `strace` in one terminal on the PID of the `www-data` Apache process and in another terminal, curled the server using `curl sI <localhost ip>`. Strace revelead an `ENOENT (No such file or directory)` error ocuring when the file `var/www/html/wp-includes/class-wp-locale.phpp` was being accessed.
 
-4. [Uche](https://github.com/Kinguche2) w[Uche](https://github.com/Kinguche2) proceeded to check each file in the `/var/www/html/` directory to find the erroneous `.phpp` file extension. the extension was located in the `wp-settings.php` file (line 137).
+4. [Uche](https://github.com/Kinguche2) proceeded to check each file in the `/var/www/html/` directory to find the erroneous `.phpp` file extension. the extension was located in the `wp-settings.php` file (line 137).
 
 5. The trailing `p` was removed from the line.
 
