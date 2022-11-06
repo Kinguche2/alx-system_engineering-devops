@@ -19,7 +19,7 @@ Junior Software developer on duty as at the time of this error was [Uche](https:
 
 7. A puppet manifest was made to automate fixing of the error.
 
-##Summary
+## Summary
 
 A typo error was the bug in this case and removing of the trailing `p` allowed the WordPress app to locate the correct file.
 
